@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - E-Voting System</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times;
+            background-color: #99CCFF;
+            margin: 0;
+            padding: 2em;
+        }
+
+        header {
+            background-color: #000066;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000066;
+            color: #fff;
+            padding: 1em;
+            margin-top: 5em;
+            text-align: center;
+        }
+
+        .container {
+            width: 400px;
+            margin: 3em auto;
+            background: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            border: 1px solid;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1em;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+        }
+
+        form button {
+            margin-top: 2em;
+            padding: 1em 1.2em;
+            background-color: #0066FF;
+            color: #fff;
+            border: solid;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>Login</h1>
+</header>
+
+<div class="container">
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="role">Select your role:</label>
+        <select id="role" name="role" required>
+            <option value="">-- Select Role --</option>
+            <option value="voter">Voter</option>
+            <option value="candidate">Candidate</option>
+        </select>
+        
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div class="back-link">
+    <a href="coverpage.html">Go back</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 E-Voting System</p>
+</footer>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from actually submitting
+
+        const role = document.getElementById('role').value;
+
+        if (role === 'voter') {
+            window.location.href = 'voter_dashboard.html';
+        } else if (role === 'candidate') {
+            window.location.href = 'candidate_dashboard.html';
+        } else {
+            alert('Please select a role to proceed.');
+        }
+    });
+</script>
+</body>
+</html>

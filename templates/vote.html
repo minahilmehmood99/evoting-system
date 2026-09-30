@@ -1,0 +1,105 @@
+<style>
+        title {
+            color: #000000;
+            font-family: arial, sans-serif;
+            text-align: center;
+        }
+
+        body {
+            font-family: "Times New Roman", Times;
+            background-color: #99CCFF;
+            margin: 0;
+            padding: 2em;
+        }
+
+        header {
+            background-color: #000066;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000066;
+            color: #fff;
+            padding: 1em;
+            margin-top: 10em;
+            text-align: center;
+        }
+
+        .container {
+            width: 600px;
+            margin: 3em auto;
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1em;
+        }
+
+        form select {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.5em;
+        }
+
+        form button {
+            margin-top: 1.5em;
+            padding: 0.8em 1.5em;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote - E-Voting System</title>
+    
+</head>
+<body>
+
+<header>
+    <h1>Cast Your Vote</h1>
+</header>
+
+<div class="container">
+    <form id="voteForm">
+        <label for="candidate">Select a Candidate:</label>
+        <select id="candidate" name="candidate" required>
+            <option value="">-- Select --</option>
+            <option value="candidate1">Candidate 1</option>
+            <option value="candidate2">Candidate 2</option>
+            <option value="candidate3">Candidate 3</option>
+        </select>
+        <button type="submit">Submit Vote</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 E-Voting System</p>
+</footer>
+
+<script>
+    document.getElementById("voteForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        const selectedCandidate = document.getElementById("candidate").value;
+
+        if (selectedCandidate) {
+            // You can add logic to record vote here if needed
+            window.location.href = "vote_casted_successfully.html"; // Redirect to success page
+        } else {
+            alert("Please select a candidate before submitting your vote.");
+        }
+    });
+</script>
+
+</body>
+</html>

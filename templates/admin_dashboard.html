@@ -1,0 +1,137 @@
+ <style>
+    title{
+color: 000000;
+font-family: arial, sans-serif;
+text-align:center;}
+
+body {
+    font-family: Times New Roman, Times;
+    background-color: #99CCFF;
+    margin: 0;
+    padding: 2em;
+}
+header{
+    background-color: #000066;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+footer{
+background-color: #000066;
+color: #fff;
+padding: 1em;
+margin: 5em;
+text-align: center;}
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      margin-top: 2em;
+      border-radius: 8px;
+      
+    }
+
+   
+    section h2 {
+      color: #003366;
+      margin-bottom: 0.5em;
+    }
+
+    input, select, button {
+      display: block;
+      margin: 0.5em 0;
+      padding: 0.5em;
+      width: 100%;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004a99;
+    }
+
+      </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - E-Voting System</title>
+ 
+</head>
+<body>
+
+<header>
+  <h1>Admin Panel</h1>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2>Add Voter or Candidate</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="ID (e.g. VOT123)">
+    <select>
+      <option value="">Select Role</option>
+      <option value="voter">Voter</option>
+      <option value="candidate">Candidate</option>
+    </select>
+    <button type="submit">Add</button>
+  </section>
+
+  <section>
+    <h2>Search Voter or Candidate</h2>
+    <input type="text" placeholder="Enter name or ID">
+    <button>Search</button>
+  </section>
+
+  <section>
+    <h2>Update Voter or Candidate</h2>
+    <input type="text" placeholder="Enter ID to update">
+    <input type="text" placeholder="New Name">
+    <input type="email" placeholder="New Email">
+    <button>Update</button>
+  </section>
+
+  <section>
+    <h2>Delete Voter or Candidate</h2>
+    <input type="text" placeholder="Enter ID to delete">
+    <button style="background-color: #cc0000;">Delete</button>
+  </section>
+   <section>
+  <h2>Add Candidate to Candidate List</h2>
+  <input type="text" placeholder="Candidate Name">
+  <input type="text" placeholder="Political Party">
+  <textarea placeholder="Short Bio" rows="4" style="width: 100%; padding: 0.5em;"></textarea>
+  <input type="url" placeholder="Image URL (optional)">
+  <button>Add to List</button>
+</section>
+
+
+</div>
+<div><p>
+
+</p></div>
+<div>
+<a href="coverpage.html"> Go back to home</a>
+</div>
+<footer>
+  &copy; 2025 E-Voting System
+</footer>
+
+</body>
+</html>
